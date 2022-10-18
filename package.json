@@ -1,0 +1,31 @@
+{
+  "name": "docker-provider-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main.js",
+    "docker:build": "docker build -t ghcr.io/esedsl/docker-provider-template .",
+    "docker:run": "docker run --rm -p 8080:8080 ghcr.io/esedsl/docker-provider-template",
+    "docker:push": "docker push ghcr.io/esedsl/docker-provider-template"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esedsl/docker-provider-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esedsl/docker-provider-template/issues"
+  },
+  "homepage": "https://github.com/esedsl/docker-provider-template#readme",
+  "dependencies": {
+    "axios": "^1.1.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
