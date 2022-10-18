@@ -33,6 +33,8 @@ app.get("/", async (req, res) => {
       'JWT': jwt
     }
   });
+
+  res.end();
 });
 
 
