@@ -25,13 +25,6 @@ app.get("/", async (req, res) => {
     "id": requestId
   }));
 
-  const request = {
-    request_id: requestId,
-    jwt,
-    webhookUrl: webhookUrl,
-    target_address: targetAddress
-  }
-
   const providerData = await run(targetAddress);
 
   axios.post(webhookUrl, providerData, {
