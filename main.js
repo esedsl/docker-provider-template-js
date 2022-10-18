@@ -32,7 +32,7 @@ app.get("/", async (req, res) => {
     target_address: targetAddress
   }
 
-  const providerData = await run(request);
+  const providerData = await run(targetAddress);
 
   axios.post(webhookUrl, providerData, {
     headers: {
