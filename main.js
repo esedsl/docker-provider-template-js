@@ -16,11 +16,13 @@ app.get("/", async (req, res) => {
 
   if (!webhookUrl || !jwt || !targetAddress) {
     res.status(400).send("Missing required parameters");
+    res.end();
+    return;
   }
 
   const requestId = randomBytes(16).toString("hex");
 
-  res.send(JSON.stringify({
+  res.write(JSON.stringify({
     "status": 'pending',
     "id": requestId
   }));
